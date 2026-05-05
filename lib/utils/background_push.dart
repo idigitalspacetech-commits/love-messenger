@@ -1,4 +1,4 @@
-/*
+﻿/*
  *   Famedly
  *   Copyright (C) 2020, 2021 Famedly GmbH
  *   Copyright (C) 2021 Fluffychat
@@ -24,11 +24,11 @@ import 'dart:isolate';
 import 'dart:ui';
 
 //<GOOGLE_SERVICES>import 'package:fcm_shared_isolate/fcm_shared_isolate.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/main.dart';
-import 'package:fluffychat/utils/notification_background_handler.dart';
-import 'package:fluffychat/utils/push_helper.dart';
-import 'package:fluffychat/widgets/fluffy_chat_app.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/main.dart';
+import 'package:love_messenger/utils/notification_background_handler.dart';
+import 'package:love_messenger/utils/push_helper.dart';
+import 'package:love_messenger/widgets/fluffy_chat_app.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';

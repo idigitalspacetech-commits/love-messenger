@@ -1,13 +1,13 @@
-import 'dart:math';
+﻿import 'dart:math';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/utils/file_description.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/utils/url_launcher.dart';
-import 'package:fluffychat/widgets/blur_hash.dart';
-import 'package:fluffychat/widgets/mxc_image.dart';
+import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/utils/file_description.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
+import 'package:love_messenger/utils/url_launcher.dart';
+import 'package:love_messenger/widgets/blur_hash.dart';
+import 'package:love_messenger/widgets/mxc_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:matrix/matrix.dart';

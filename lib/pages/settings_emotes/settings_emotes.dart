@@ -1,15 +1,15 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:archive/archive.dart'
     if (dart.library.io) 'package:archive/archive_io.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/client_manager.dart';
-import 'package:fluffychat/utils/file_selector.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_text_input_dialog.dart';
-import 'package:fluffychat/widgets/future_loading_dialog.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/client_manager.dart';
+import 'package:love_messenger/utils/file_selector.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/show_text_input_dialog.dart';
+import 'package:love_messenger/widgets/future_loading_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' hide Client;

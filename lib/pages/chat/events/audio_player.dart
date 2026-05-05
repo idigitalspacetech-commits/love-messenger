@@ -1,13 +1,13 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'dart:io';
 
 import 'package:async/async.dart';
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/utils/error_reporter.dart';
-import 'package:fluffychat/utils/file_description.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/url_launcher.dart';
+import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/utils/error_reporter.dart';
+import 'package:love_messenger/utils/file_description.dart';
+import 'package:love_messenger/utils/localized_exception_extension.dart';
+import 'package:love_messenger/utils/url_launcher.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';

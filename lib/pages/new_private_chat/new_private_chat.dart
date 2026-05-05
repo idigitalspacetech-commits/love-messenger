@@ -1,14 +1,14 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/new_private_chat/new_private_chat_view.dart';
-import 'package:fluffychat/pages/new_private_chat/qr_scanner_modal.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/fluffy_share.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/utils/url_launcher.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/new_private_chat/new_private_chat_view.dart';
+import 'package:love_messenger/pages/new_private_chat/qr_scanner_modal.dart';
+import 'package:love_messenger/utils/adaptive_bottom_sheet.dart';
+import 'package:love_messenger/utils/fluffy_share.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
+import 'package:love_messenger/utils/url_launcher.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:matrix/matrix.dart';

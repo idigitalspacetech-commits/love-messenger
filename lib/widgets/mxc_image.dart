@@ -1,11 +1,11 @@
-import 'dart:io';
+﻿import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/utils/client_download_content_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_file_extension.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/utils/client_download_content_extension.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/matrix_file_extension.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

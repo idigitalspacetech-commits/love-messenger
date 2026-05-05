@@ -1,10 +1,10 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/date_time_extension.dart';
-import 'package:fluffychat/widgets/avatar.dart';
+import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/adaptive_bottom_sheet.dart';
+import 'package:love_messenger/utils/date_time_extension.dart';
+import 'package:love_messenger/widgets/avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

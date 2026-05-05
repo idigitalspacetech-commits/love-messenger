@@ -1,11 +1,11 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/pages/sign_in/view_model/model/public_homeserver_data.dart';
-import 'package:fluffychat/pages/sign_in/view_model/sign_in_state.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/pages/sign_in/view_model/model/public_homeserver_data.dart';
+import 'package:love_messenger/pages/sign_in/view_model/sign_in_state.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/widgets.dart';
 import 'package:matrix/matrix_api_lite/utils/logs.dart';
 
@@ -55,6 +55,20 @@ class SignInViewModel extends ValueNotifier<SignInState> {
     final defaultHomeserverData = PublicHomeserverData(
       name: AppSettings.defaultHomeserver.value,
     );
+
+    // Private server mode — skip public list, lock to the configured homeserver.
+    if (!AppConfig.allowOtherHomeservers) {
+      value = value.copyWith(
+        selectedHomeserver: defaultHomeserverData,
+        publicHomeservers: AsyncSnapshot.withData(
+          ConnectionState.done,
+          [defaultHomeserverData],
+        ),
+      );
+      _filterHomeservers();
+      return;
+    }
+
     try {
       final client = await matrixService.getLoginClient();
       final response = await client.httpClient.get(AppConfig.homeserverList);

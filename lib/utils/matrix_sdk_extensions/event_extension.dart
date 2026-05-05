@@ -1,6 +1,6 @@
-import 'package:async/async.dart' as async;
-import 'package:fluffychat/utils/size_string.dart';
-import 'package:fluffychat/widgets/future_loading_dialog.dart';
+﻿import 'package:async/async.dart' as async;
+import 'package:love_messenger/utils/size_string.dart';
+import 'package:love_messenger/widgets/future_loading_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';

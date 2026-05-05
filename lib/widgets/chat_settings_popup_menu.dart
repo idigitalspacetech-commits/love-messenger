@@ -1,8 +1,8 @@
-import 'dart:async';
+﻿import 'dart:async';
 
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:fluffychat/widgets/future_loading_dialog.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:love_messenger/widgets/future_loading_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';

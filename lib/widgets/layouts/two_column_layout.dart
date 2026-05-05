@@ -1,4 +1,4 @@
-import 'package:fluffychat/config/themes.dart';
+﻿import 'package:love_messenger/config/themes.dart';
 import 'package:flutter/material.dart';
 
 class TwoColumnLayout extends StatelessWidget {

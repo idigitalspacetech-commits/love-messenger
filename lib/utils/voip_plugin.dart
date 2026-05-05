@@ -1,8 +1,8 @@
-import 'dart:core';
+﻿import 'dart:core';
 
-import 'package:fluffychat/pages/chat_list/chat_list.dart';
-import 'package:fluffychat/pages/dialer/dialer.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:love_messenger/pages/chat_list/chat_list.dart';
+import 'package:love_messenger/pages/dialer/dialer.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';

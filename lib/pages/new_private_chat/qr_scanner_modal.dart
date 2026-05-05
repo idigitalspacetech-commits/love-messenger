@@ -1,7 +1,7 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'dart:io';
 
-import 'package:fluffychat/l10n/l10n.dart';
+import 'package:love_messenger/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 

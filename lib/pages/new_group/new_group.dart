@@ -1,10 +1,10 @@
-import 'dart:typed_data';
+﻿import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/new_group/new_group_view.dart';
-import 'package:fluffychat/utils/file_selector.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/new_group/new_group_view.dart';
+import 'package:love_messenger/utils/file_selector.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart' as sdk;

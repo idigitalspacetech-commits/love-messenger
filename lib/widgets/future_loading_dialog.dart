@@ -1,9 +1,9 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:async/async.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/localized_exception_extension.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix_api_lite/utils/logs.dart';
 

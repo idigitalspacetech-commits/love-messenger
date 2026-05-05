@@ -1,7 +1,7 @@
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/settings_password/settings_password_view.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+﻿import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/settings_password/settings_password_view.dart';
+import 'package:love_messenger/utils/localized_exception_extension.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,6 +1,6 @@
-import 'package:fluffychat/utils/string_color.dart';
-import 'package:fluffychat/widgets/mxc_image.dart';
-import 'package:fluffychat/widgets/presence_builder.dart';
+﻿import 'package:love_messenger/utils/string_color.dart';
+import 'package:love_messenger/widgets/mxc_image.dart';
+import 'package:love_messenger/widgets/presence_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

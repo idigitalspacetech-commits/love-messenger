@@ -1,9 +1,9 @@
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/utils/stream_extension.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/hover_builder.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+﻿import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/utils/stream_extension.dart';
+import 'package:love_messenger/widgets/avatar.dart';
+import 'package:love_messenger/widgets/hover_builder.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

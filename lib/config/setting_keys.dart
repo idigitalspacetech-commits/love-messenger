@@ -1,7 +1,7 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 
 import 'package:async/async.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:matrix/matrix_api_lite/utils/logs.dart';
@@ -50,14 +50,14 @@ enum AppSettings<T> {
   ),
   displayChatDetailsColumn('chat.fluffy.display_chat_details_column', false),
   // AppConfig-mirrored settings
-  applicationName<String>('chat.fluffy.application_name', 'FluffyChat'),
-  defaultHomeserver<String>('chat.fluffy.default_homeserver', 'matrix.org'),
+  applicationName<String>('chat.fluffy.application_name', 'Love Messenger'),
+  defaultHomeserver<String>('chat.fluffy.default_homeserver', 'app.minigram.net'),
   // colorSchemeSeed stored as ARGB int
   colorSchemeSeedInt<int>('chat.fluffy.color_scheme_seed', 0xFF5625BA),
   emojiSuggestionLocale<String>('emoji_suggestion_locale', ''),
   enableSoftLogout<bool>('chat.fluffy.enable_soft_logout', false),
   enableMatrixNativeOIDC<bool>('chat.fluffy.enable_matrix_native_oidc', false),
-  presetHomeserver<String>('chat.fluffy.preset_homeserver', ''),
+  presetHomeserver<String>('chat.fluffy.preset_homeserver', 'app.minigram.net'),
   welcomeText<String>('chat.fluffy.welcome_text', ''),
   website<String>('chat.fluffy.website_url', 'https://fluffychat.im'),
   logoUrl<String>(

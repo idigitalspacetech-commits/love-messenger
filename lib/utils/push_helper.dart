@@ -1,15 +1,15 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:ui';
 
 import 'package:collection/collection.dart';
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/client_download_content_extension.dart';
-import 'package:fluffychat/utils/client_manager.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:fluffychat/utils/notification_background_handler.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
+import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/client_download_content_extension.dart';
+import 'package:love_messenger/utils/client_manager.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:love_messenger/utils/notification_background_handler.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';

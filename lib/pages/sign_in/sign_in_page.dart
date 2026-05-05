@@ -1,13 +1,14 @@
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/sign_in/view_model/model/public_homeserver_data.dart';
-import 'package:fluffychat/pages/sign_in/view_model/sign_in_view_model.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/sign_in_flows/check_homeserver.dart';
-import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
-import 'package:fluffychat/widgets/matrix.dart';
-import 'package:fluffychat/widgets/view_model_builder.dart';
+﻿import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/sign_in/view_model/model/public_homeserver_data.dart';
+import 'package:love_messenger/pages/sign_in/view_model/sign_in_view_model.dart';
+import 'package:love_messenger/utils/localized_exception_extension.dart';
+import 'package:love_messenger/utils/sign_in_flows/check_homeserver.dart';
+import 'package:love_messenger/widgets/layouts/login_scaffold.dart';
+import 'package:love_messenger/widgets/matrix.dart';
+import 'package:love_messenger/widgets/view_model_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -54,148 +55,175 @@ class SignInPage extends StatelessWidget {
                       : L10n.of(context).signInGreeting,
                   textAlign: .center,
                 ),
-                TextField(
-                  readOnly:
-                      state.publicHomeservers.connectionState ==
-                          ConnectionState.waiting ||
-                      state.loginLoading.connectionState ==
-                          ConnectionState.waiting,
-                  controller: viewModel.filterTextController,
-                  autocorrect: false,
-                  keyboardType: TextInputType.url,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: theme.colorScheme.secondaryContainer,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    errorText: state.publicHomeservers.error?.toLocalizedString(
-                      context,
-                    ),
-                    prefixIcon: const Icon(Icons.search_outlined),
-                    hintText: L10n.of(context).searchOrEnterHomeserverAddress,
-                  ),
-                ),
-                if (state.publicHomeservers.connectionState ==
-                    ConnectionState.done)
-                  Expanded(
-                    child: Material(
-                      borderRadius: BorderRadius.circular(
-                        AppConfig.borderRadius,
+                if (AppConfig.allowOtherHomeservers) ...[
+                  // Public mode: search field + selectable server list
+                  TextField(
+                    readOnly:
+                        state.publicHomeservers.connectionState ==
+                            ConnectionState.waiting ||
+                        state.loginLoading.connectionState ==
+                            ConnectionState.waiting,
+                    controller: viewModel.filterTextController,
+                    autocorrect: false,
+                    keyboardType: TextInputType.url,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: theme.colorScheme.secondaryContainer,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(99),
                       ),
-                      clipBehavior: Clip.hardEdge,
-                      color: theme.colorScheme.surfaceContainerLow,
-                      child: RadioGroup<PublicHomeserverData>(
-                        groupValue: state.selectedHomeserver,
-                        onChanged: viewModel.selectHomeserver,
-                        child: ListView.builder(
-                          itemCount: publicHomeservers.length,
-                          itemBuilder: (context, i) {
-                            final server = publicHomeservers[i];
-                            final website = server.website;
-                            return RadioListTile(
-                              value: server,
-                              enabled:
-                                  state.loginLoading.connectionState !=
-                                  ConnectionState.waiting,
-                              title: Row(
-                                children: [
-                                  Expanded(
-                                    child: Text(server.name ?? 'Unknown'),
-                                  ),
-                                  if (website != null)
-                                    SizedBox.square(
-                                      dimension: 32,
-                                      child: IconButton(
-                                        tooltip: website,
-                                        icon: const Icon(
-                                          Icons.open_in_new_outlined,
-                                          size: 16,
+                      errorText: state.publicHomeservers.error
+                          ?.toLocalizedString(context),
+                      prefixIcon: const Icon(Icons.search_outlined),
+                      hintText: L10n.of(context).searchOrEnterHomeserverAddress,
+                    ),
+                  ),
+                  if (state.publicHomeservers.connectionState ==
+                      ConnectionState.done)
+                    Expanded(
+                      child: Material(
+                        borderRadius: BorderRadius.circular(
+                          AppConfig.borderRadius,
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                        color: theme.colorScheme.surfaceContainerLow,
+                        child: RadioGroup<PublicHomeserverData>(
+                          groupValue: state.selectedHomeserver,
+                          onChanged: viewModel.selectHomeserver,
+                          child: ListView.builder(
+                            itemCount: publicHomeservers.length,
+                            itemBuilder: (context, i) {
+                              final server = publicHomeservers[i];
+                              final website = server.website;
+                              return RadioListTile(
+                                value: server,
+                                enabled:
+                                    state.loginLoading.connectionState !=
+                                    ConnectionState.waiting,
+                                title: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(server.name ?? 'Unknown'),
+                                    ),
+                                    if (website != null)
+                                      SizedBox.square(
+                                        dimension: 32,
+                                        child: IconButton(
+                                          tooltip: website,
+                                          icon: const Icon(
+                                            Icons.open_in_new_outlined,
+                                            size: 16,
+                                          ),
+                                          onPressed: () =>
+                                              launchUrlString(website),
                                         ),
-                                        onPressed: () =>
-                                            launchUrlString(website),
                                       ),
-                                    ),
-                                ],
-                              ),
-                              subtitle: Column(
-                                spacing: 4.0,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  if (server.features?.isNotEmpty == true)
-                                    Wrap(
-                                      spacing: 4.0,
-                                      runSpacing: 4.0,
-                                      children: [
-                                        ...?server.languages?.map(
-                                          (language) => Material(
-                                            borderRadius: BorderRadius.circular(
-                                              AppConfig.borderRadius,
-                                            ),
-                                            color: theme
-                                                .colorScheme
-                                                .tertiaryContainer,
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                    horizontal: 6.0,
-                                                    vertical: 3.0,
+                                  ],
+                                ),
+                                subtitle: Column(
+                                  spacing: 4.0,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    if (server.features?.isNotEmpty == true)
+                                      Wrap(
+                                        spacing: 4.0,
+                                        runSpacing: 4.0,
+                                        children: [
+                                          ...?server.languages?.map(
+                                            (language) => Material(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                    AppConfig.borderRadius,
                                                   ),
-                                              child: Text(
-                                                language,
-                                                style: TextStyle(
-                                                  fontSize: 10,
-                                                  color: theme
-                                                      .colorScheme
-                                                      .onTertiaryContainer,
+                                              color: theme
+                                                  .colorScheme
+                                                  .tertiaryContainer,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                      horizontal: 6.0,
+                                                      vertical: 3.0,
+                                                    ),
+                                                child: Text(
+                                                  language,
+                                                  style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: theme.colorScheme
+                                                        .onTertiaryContainer,
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        ...server.features!.map(
-                                          (feature) => Material(
-                                            borderRadius: BorderRadius.circular(
-                                              AppConfig.borderRadius,
-                                            ),
-                                            color: theme
-                                                .colorScheme
-                                                .secondaryContainer,
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                    horizontal: 6.0,
-                                                    vertical: 3.0,
+                                          ...server.features!.map(
+                                            (feature) => Material(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                    AppConfig.borderRadius,
                                                   ),
-                                              child: Text(
-                                                feature,
-                                                style: TextStyle(
-                                                  fontSize: 10,
-                                                  color: theme
-                                                      .colorScheme
-                                                      .onSecondaryContainer,
+                                              color: theme
+                                                  .colorScheme
+                                                  .secondaryContainer,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                      horizontal: 6.0,
+                                                      vertical: 3.0,
+                                                    ),
+                                                child: Text(
+                                                  feature,
+                                                  style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: theme.colorScheme
+                                                        .onSecondaryContainer,
+                                                  ),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
+                                    Text(
+                                      server.description ??
+                                          'A matrix homeserver',
                                     ),
-                                  Text(
-                                    server.description ?? 'A matrix homeserver',
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ),
+                    )
+                  else
+                    Center(child: CircularProgressIndicator.adaptive()),
+                ] else ...[
+                  // Private server mode: non-interactive locked server tile
+                  Material(
+                    borderRadius: BorderRadius.circular(AppConfig.borderRadius),
+                    color: theme.colorScheme.surfaceContainerLow,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.lock_outlined,
+                        color: theme.colorScheme.primary,
+                      ),
+                      title: Text(
+                        selectedHomserver?.name ??
+                            AppSettings.defaultHomeserver.value,
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          color: theme.colorScheme.onSurface,
+                        ),
+                      ),
+                      subtitle: const Text('Private server'),
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(AppConfig.borderRadius),
+                      ),
                     ),
-                  )
-                else
-                  Center(child: CircularProgressIndicator.adaptive()),
+                  ),
+                ],
               ],
             ),
           ),

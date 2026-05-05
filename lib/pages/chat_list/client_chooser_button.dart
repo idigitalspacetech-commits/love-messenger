@@ -1,8 +1,8 @@
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+﻿import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/show_ok_cancel_alert_dialog.dart';
+import 'package:love_messenger/widgets/avatar.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/matrix.dart';

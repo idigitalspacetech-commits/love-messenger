@@ -1,6 +1,6 @@
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/url_launcher.dart';
-import 'package:fluffychat/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
+﻿import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/url_launcher.dart';
+import 'package:love_messenger/widgets/adaptive_dialogs/adaptive_dialog_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 

@@ -1,9 +1,9 @@
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/settings_notifications/push_rule_extensions.dart';
-import 'package:fluffychat/widgets/layouts/max_width_body.dart';
-import 'package:fluffychat/widgets/settings_switch_list_tile.dart';
+﻿import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/settings_notifications/push_rule_extensions.dart';
+import 'package:love_messenger/widgets/layouts/max_width_body.dart';
+import 'package:love_messenger/widgets/settings_switch_list_tile.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';

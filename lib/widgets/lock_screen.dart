@@ -1,8 +1,8 @@
-import 'dart:async';
+﻿import 'dart:async';
 
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/widgets/app_lock.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/widgets/app_lock.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

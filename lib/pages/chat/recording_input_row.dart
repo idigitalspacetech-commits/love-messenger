@@ -1,7 +1,7 @@
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/chat/chat_input_row.dart';
-import 'package:fluffychat/pages/chat/recording_view_model.dart';
+﻿import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/chat/chat_input_row.dart';
+import 'package:love_messenger/pages/chat/recording_view_model.dart';
 import 'package:flutter/material.dart';
 
 class RecordingInputRow extends StatelessWidget {

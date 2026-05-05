@@ -1,10 +1,10 @@
-import 'dart:io';
+﻿import 'dart:io';
 
 import 'package:chewie/chewie.dart';
-import 'package:fluffychat/utils/localized_exception_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/event_extension.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/widgets/blur_hash.dart';
+import 'package:love_messenger/utils/localized_exception_extension.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
+import 'package:love_messenger/widgets/blur_hash.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';

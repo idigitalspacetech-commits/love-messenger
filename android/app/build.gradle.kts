@@ -34,7 +34,7 @@ configurations.all {
 
 
 android {
-    namespace = "chat.fluffy.fluffychat"
+    namespace = "com.lovemessenger.messenger"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -70,7 +70,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "chat.fluffy.fluffychat"
+        applicationId = "com.lovemessenger.messenger"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

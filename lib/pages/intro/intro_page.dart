@@ -1,9 +1,9 @@
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/intro/flows/restore_backup_flow.dart';
-import 'package:fluffychat/utils/platform_infos.dart';
-import 'package:fluffychat/widgets/layouts/login_scaffold.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+﻿import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/intro/flows/restore_backup_flow.dart';
+import 'package:love_messenger/utils/platform_infos.dart';
+import 'package:love_messenger/widgets/layouts/login_scaffold.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:go_router/go_router.dart';

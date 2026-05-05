@@ -1,7 +1,7 @@
-import 'package:fluffychat/config/app_config.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/utils/url_launcher.dart';
-import 'package:fluffychat/widgets/mxc_image.dart';
+﻿import 'package:love_messenger/config/app_config.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/utils/url_launcher.dart';
+import 'package:love_messenger/widgets/mxc_image.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

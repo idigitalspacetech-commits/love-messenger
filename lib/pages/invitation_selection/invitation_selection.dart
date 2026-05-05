@@ -1,9 +1,9 @@
-import 'dart:async';
+﻿import 'dart:async';
 
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/invitation_selection/invitation_selection_view.dart';
-import 'package:fluffychat/widgets/future_loading_dialog.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/invitation_selection/invitation_selection_view.dart';
+import 'package:love_messenger/widgets/future_loading_dialog.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

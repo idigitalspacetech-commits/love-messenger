@@ -1,16 +1,16 @@
-import 'dart:ui';
+﻿import 'dart:ui';
 
 import 'package:dynamic_color/dynamic_color.dart';
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/config/themes.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/chat/events/state_message.dart';
-import 'package:fluffychat/utils/account_config.dart';
-import 'package:fluffychat/utils/color_value.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/layouts/max_width_body.dart';
-import 'package:fluffychat/widgets/matrix.dart';
-import 'package:fluffychat/widgets/mxc_image.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/config/themes.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/chat/events/state_message.dart';
+import 'package:love_messenger/utils/account_config.dart';
+import 'package:love_messenger/utils/color_value.dart';
+import 'package:love_messenger/widgets/avatar.dart';
+import 'package:love_messenger/widgets/layouts/max_width_body.dart';
+import 'package:love_messenger/widgets/matrix.dart';
+import 'package:love_messenger/widgets/mxc_image.dart';
 import 'package:flutter/material.dart';
 import 'package:matrix/matrix.dart';
 

@@ -1,15 +1,15 @@
-import 'dart:math';
+﻿import 'dart:math';
 
-import 'package:fluffychat/config/setting_keys.dart';
-import 'package:fluffychat/l10n/l10n.dart';
-import 'package:fluffychat/pages/chat/events/poll.dart';
-import 'package:fluffychat/pages/chat/events/video_player.dart';
-import 'package:fluffychat/pages/image_viewer/image_viewer.dart';
-import 'package:fluffychat/utils/adaptive_bottom_sheet.dart';
-import 'package:fluffychat/utils/date_time_extension.dart';
-import 'package:fluffychat/utils/matrix_sdk_extensions/matrix_locals.dart';
-import 'package:fluffychat/widgets/avatar.dart';
-import 'package:fluffychat/widgets/matrix.dart';
+import 'package:love_messenger/config/setting_keys.dart';
+import 'package:love_messenger/l10n/l10n.dart';
+import 'package:love_messenger/pages/chat/events/poll.dart';
+import 'package:love_messenger/pages/chat/events/video_player.dart';
+import 'package:love_messenger/pages/image_viewer/image_viewer.dart';
+import 'package:love_messenger/utils/adaptive_bottom_sheet.dart';
+import 'package:love_messenger/utils/date_time_extension.dart';
+import 'package:love_messenger/utils/matrix_sdk_extensions/matrix_locals.dart';
+import 'package:love_messenger/widgets/avatar.dart';
+import 'package:love_messenger/widgets/matrix.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matrix/encryption.dart';
